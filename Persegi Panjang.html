@@ -1,56 +1,254 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta charset="utf-8"/>
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Math Bangun Datar</title>
+	<style type="text/css">
+		body {
+			margin-top: 100px;
+			margin-left: 150px;
+			margin-right: 150px;
+			padding: 0;
+			font-family: 'GILL sans', 'GILL Sans MT', Calibri, 'Trebuchet MS';
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: black;
+			background-image: linear-gradient(to right, #ffaebc, #6af2f0);
+			-webkit-text-size-adjust: 100%;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #175873;
+		}
+		li {
+			float: left;
+		}
+		li a, .dropbtn {
+			display: inline-block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		li a:hover, .dropdown:hover dropbtn {
+			background-color: #c85250;
+			transition: all 0.5s ease;
+		}
+		.float-kiri {
+			float: left;
+			margin-right: 50px;
+		}
+		.active {
 
+				}
+	</style>
 </head>
 <body>
-<div id="ggbApplet"></div>
-
-<script>
-var parameters = {
-"id": "ggbApplet",
-"width":1550,
-"height":658,
-"showMenuBar":true,
-"showAlgebraInput":true,
-"showToolBar":true,
-"customToolBar":"0 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6",
-"showToolBarHelp":true,
-"showResetIcon":false,
-"enableLabelDrags":false,
-"enableShiftDragZoom":true,
-"enableRightClick":false,
-"errorDialogsActive":false,
-"useBrowserForJS":false,
-"allowStyleBar":false,
-"preventFocus":false,
-"showZoomButtons":true,
-"capturingThreshold":3,
-// add code here to run when the applet starts
-"appletOnLoad":function(api){ /* api.evalCommand('Segment((1,2),(3,4))');*/ },
-"showFullscreenButton":true,
-"scale":1,
-"disableAutoScale":false,
-"allowUpscale":false,
-"clickToLoad":false,
-"appName":"classic",
-"buttonRounding":0.7,
-"buttonShadows":false,
-"language":"en",
-// use this instead of ggbBase64 to load a material from geogebra.org
-// "material_id":"RHYH3UQ8",
-// use this instead of ggbBase64 to load a .ggb file
-// "filename":"myfile.ggb",
-"ggbBase64":"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",
-};
-// is3D=is 3D applet using 3D view, AV=Algebra View, SV=Spreadsheet View, CV=CAS View, EV2=Graphics View 2, CP=Construction Protocol, PC=Probability Calculator DA=Data Analysis, FI=Function Inspector, macro=Macros
-var views = {'is3D': 0,'AV': 1,'SV': 0,'CV': 0,'EV2': 0,'CP': 0,'PC': 0,'DA': 0,'FI': 0,'macro': 0};
-var applet = new GGBApplet(parameters, '5.0', views);
-window.onload = function() {applet.inject('ggbApplet')};
-applet.setPreviewImage('data:image/gif;base64,R0lGODlhAQABAAAAADs=','https://www.geogebra.org/images/GeoGebra_loading.png','https://www.geogebra.org/images/applet_play.png');
-</script>
+	<div id="header">
+		<center>
+		<h2>MATEMATIKA</h2>
+		</center>
+		<h2>BANGUN DATAR</h2>
+			<img src="cover bangun datar.png" width="250" height="200">
+<p>Bangun datar merupakan suatu bidang datar yang dibatasi oleh garis-garis lurus atau garis lengkung atau lebih tepatnya suatu bangun yang memiliki bidang rata serta mempunyai dua dimensi. </p>
+	</div>
+<div id="navbar">
+	<ul>
+		<li><a href="Profile.html">Profile</a></li>
+		<li><a href="Persegi.html">Persegi</a></li>
+		<li class="active"><a href="Persegi Panjang.html">Persegi Panjang</a></li>
+		<li><a href="Trapesium.html">Trapesium</a></li>
+		<li><a href="Layang-layang.html">Layang-layang</a></li>
+	</ul>
+</div>
+<div id="content">
+	<center>
+	<h2>BAB II</h2>
+	<h2>Persegi Panjang</h2>
+	<iframe src="geogebra persegi panjang.html" width="800" height="400" align="content"></iframe>
+	</center>
+	<br>
+	<h3>Menghitung Keliling Persegi Panjang</h3>
+	<p align="justify">Keliling persegi panjang merupakan jumlah dari keempat sisinya. Keliling persegi panjang dapat dihitung dengan satuan tak baku dan satuan baku.</p>
+	<ol>
+		<li>Dengan Satuan Tak Baku</li>
+		<br>
+	<p>Contoh:</p>
+	<img src="persegi panjang keliling2.png" >
+	<p>Panjang (p) persegi panjang tersebut adalah 9 satuan. Lebar (l) persegi panjang tersebut adalah 6 satuan. </p>
+	<p>Maka, kelilingnya = 9 + 6 + 9 + 6 = 30 satuan </p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= (p + l) + (p + l) </p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 2 × (p + l)</p>
+	<p>Jadi, keliling persegi panjang adalah 30 satuan.</p>
+		<li>Dengan Satuan Baku</li>
+	<br>
+	<br>
+	<img class="float-kiri" src="persegipanjangsatuanbaku.png">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>	
+	<p>Keliling persegi panjang = 9 + 6 + 9 + 6 = 30 cm</p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= p + l + p + l </p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= (p + l) + (p + l) </p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 2 × (p + l)</p>
+	<p>Jadi, keliling persegi panjang adalah 30 cm.</p>
+	</ol>
+	<br>
+	<table border="1">
+		<thead>
+			<th>Rumus keliling persegi panjang (K) = 2 × (p + l)</th>
+		</thead>
+	</table>
+	<br>
+	<h3>Menghitung Luas Persegi Panjang</h3>
+	<img class="float-kiri" src="persegi satuan.png">
+	<p>Contoh:</p>
+	<p>Luas daerah bidang datar adalah banyak persegi satuan yang menutupi bangun tersebut.</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p align="justify">Menghitung banyak persegi satuan sama dengan menghitung luas bidang datar tersebut. Luas persegi panjang di atas adalah 15 satuan persegi. </p>  <p>Diperoleh dari = 5 satuan × 3 satuan</p> 
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 15 satuan</p>
+	<p>Luas persegi panjang = panjang × lebar = p × l.</p>
+	<table border="1">
+		<thead>
+			<th>Rumus luas persegi panjang (L) = p × l</th>
+		</thead>
+	</table>
+	<br>
+	<h3>Sifat-sifat Persegi Panjang</h3>
+	<ol>
+	<img src="sifat persegipanjang1.png" width="140" height="160">
+	<br>
+		<li>Keempat sudutnya siku-siku, P = Q = R = S = 90°</li>
+		<br>
+		<li>Sisi-sisi yang berhadapan sama panjang dan sejajar </li>
+		<ol type="a">
+			<br>
+			<li>Panjang PQ = SR dan PQ // SR </li>
+			<br>
+			<li>Panjang PS = QR dan PS // QR</li>
+		</ol>
+		<br>
+		<br>
+	<img src="sifat persegipanjang2.png" width="140" height="160">
+		<li>Kedua diagonalnya sama panjang saling membagi dua sama Panjang Kedua diagonal PR dan QS pada persegi panjang PQRS berpotongan di titik T. </li>
+		<ol type="a">
+			<br>
+			<li>Panjang PR = QS </li>
+			<br>
+			<br>
+			<li>Panjang PT = QT = RT = ST</li>
+		</ol>
+	</ol>
+	<br>
+	<h3>Menyelesaikan Masalah Sehari-hari yang Berkaitan dengan Keliling dan Luas Persegi</h3>
+	<p>Contoh:</p>
+	<p>Budi membuat potongan kertas berbentuk persegi panjang. Ukuran panjangnya 8 cm dan lebar 5 cm. Berapa cm-kah kelilingnya? Berapa cm<sup>2</sup>-kah luasnya? </p>
+	<p>Penyelesaian:</p>
+	<ol type="a">
+	<li><p>Keliling &ensp;	= 2 × (p + l) </p></li>
+	<br>
+	<br>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 2 × (8 + 5) </p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 2 × 13 </p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 26</p>
+	<p>Jadi, kelilingnya adalah 26 cm. </p>
+	<li>Luas 	= p × l </li>
+	<br>
+	<p>&ensp;&ensp;&ensp;&ensp;= 8 × 5 </p>
+	<p>&ensp;&ensp;&ensp;&ensp;= 40</p>
+	<p>Jadi, luasnya adalah 40 cm<sup>2</sup>.</p>
+	</ol>
+	<br>
+	<table border="1">
+		<thead>
+			<th>Rangkuman</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<ol>
+						<li>Rumus keliling persegi panjang (K) = 2 × (p + l) </li>
+						<br>
+						<li>Rumus luas persegi panjang (L) = p × l</li>
+						<br>
+						<li>Sifat-sifat Persegi panjang:</li>
+						<ol type="a">
+							<br>
+							<li>Keempat sudutnya siku-siku, P = Q = R = S = 90°</li>
+							<br>
+							<li>Sisi-sisi yang berhadapan sama panjang dan sejajar</li>
+							<br>
+							<li>Kedua diagonalnya sama panjang saling membagi dua sama panjang</li>
+						</ol>
+					</ol>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<h3>Latihan Soal</h3>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Keliling bangun di samping adalah ... cm.</th>		
+				<th><img src="latihan persegip.png"></th>
+			</tr>
+		</thead>
+	</table>
+	<p>Diketahui: p = 14 cm dan l = 9 cm</p>
+	<p>Ditanya: Keliling persegi panjang?</p>
+	<p>Jawab:</p>
+	<p>K 	= 2 × (p + l)</p>
+	<p>&ensp;&ensp;= 2 × (14 + 9)</p>
+	<p>&ensp;&ensp;= 2 × 23</p>
+	<p>&ensp;&ensp;= 46</p>
+	<p>Jadi, keliling persegi panjang tersebut adalah 46 cm.</p>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Luas bangun di samping adalah ... cm<sup>2</sup>.</th>		
+				<th><img src="latihan persegip.png"></th>
+			</tr>
+		</thead>
+	</table>
+	<p>Diketahui: p = 14 cm dan l = 9 cm</p>
+	<p>Ditanya: Luas persegi panjang?</p>
+	<p>Jawab:</p>
+	<p>L &nbsp;= p × l</p>
+	<p>&ensp;&ensp;= 14 × 9</p>
+	<p>&ensp;&ensp;= 126</p>
+	<p>Jadi, luas persegi panjang tersebut adalah 126 cm<sup>2</sup>.</p>
+	<br>
+	<h3>Evaluasi</h3>
+	<ol>
+		<li>Sebuah persegi panjang memiliki panjang 10 cm dan lebar 5 cm. Keliling persegi panjang tersebut adalah…</li>
+		<li>Sebuah persegi panjang memiliki panjang 12 cm dan lebar 8 cm. Luas persegi panjang tersebut adalah… </li>
+		<br>
+		<br>
+		<li>Berapakah luas bangun datar berikut.</li>
+		<br>
+			<p><img src="evaluasi persegip.png"></p>
+		<li>Sebuah persegi panjang keliling nya 34 cm dan memili panjang 12 cm. Berapakah lebar persegi panjang tersebut?</li>
+		<li>Sebuah persegi panjang luas nya 160 cm2 dan memiliki lebar 8 cm. Berapakah panjang persegi panjang tersebut?</li>
+	</ol>
+	<br>
+	<br>
+	<br>
+	<p>Jika masih belum mengerti cara menghitung keliling dan luas persegi panjang, kalian bisa menonton video youtube dibawah ini.</p>
+	<iframe src="https://www.youtube.com/embed/eWsaz3orKjk" width="500" height="300"></iframe>
+</div>
+	
 </body>
 </html>

@@ -1,56 +1,275 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta charset="utf-8"/>
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Math Bangun Datar</title>
+	<style type="text/css">
+		body {
+			margin-top: 100px;
+			margin-left: 150px;
+			margin-right: 150px;
+			padding: 0;
+			font-family: 'GILL sans', 'GILL Sans MT', Calibri, 'Trebuchet MS';
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: black;
+			background-image: linear-gradient(to right, #ffaebc, #6af2f0);
+			-webkit-text-size-adjust: 100%;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #175873;
+		}
+		li {
+			float: left;
+		}
+		li a, .dropbtn {
+			display: inline-block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		li a:hover, .dropdown:hover dropbtn {
+			background-color: #c85250;
+			transition: all 0.5s ease;
+		}
+		.float-kiri {
+			float: left;
+			margin-right: 50px;
+		}
+		.active {
 
+				}
+	</style>
 </head>
 <body>
-<div id="ggbApplet"></div>
+	<div id="header">
+		<center>
+		<h2>MATEMATIKA</h2>
+		</center>
+		<h2>BANGUN DATAR</h2>
+		<img src="cover bangun datar.png" width="250" height="200">
+<p>Bangun datar merupakan suatu bidang datar yang dibatasi oleh garis-garis lurus atau garis lengkung atau lebih tepatnya suatu bangun yang memiliki bidang rata serta mempunyai dua dimensi. </p>
 
-<script>
-var parameters = {
-"id": "ggbApplet",
-"width":1550,
-"height":658,
-"showMenuBar":true,
-"showAlgebraInput":true,
-"showToolBar":true,
-"customToolBar":"0 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6",
-"showToolBarHelp":true,
-"showResetIcon":false,
-"enableLabelDrags":false,
-"enableShiftDragZoom":true,
-"enableRightClick":false,
-"errorDialogsActive":false,
-"useBrowserForJS":false,
-"allowStyleBar":false,
-"preventFocus":false,
-"showZoomButtons":true,
-"capturingThreshold":3,
-// add code here to run when the applet starts
-"appletOnLoad":function(api){ /* api.evalCommand('Segment((1,2),(3,4))');*/ },
-"showFullscreenButton":true,
-"scale":1,
-"disableAutoScale":false,
-"allowUpscale":false,
-"clickToLoad":false,
-"appName":"classic",
-"buttonRounding":0.7,
-"buttonShadows":false,
-"language":"en",
-// use this instead of ggbBase64 to load a material from geogebra.org
-// "material_id":"RHYH3UQ8",
-// use this instead of ggbBase64 to load a .ggb file
-// "filename":"myfile.ggb",
-"ggbBase64":"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",
-};
-// is3D=is 3D applet using 3D view, AV=Algebra View, SV=Spreadsheet View, CV=CAS View, EV2=Graphics View 2, CP=Construction Protocol, PC=Probability Calculator DA=Data Analysis, FI=Function Inspector, macro=Macros
-var views = {'is3D': 0,'AV': 1,'SV': 0,'CV': 0,'EV2': 0,'CP': 0,'PC': 0,'DA': 0,'FI': 0,'macro': 0};
-var applet = new GGBApplet(parameters, '5.0', views);
-window.onload = function() {applet.inject('ggbApplet')};
-applet.setPreviewImage('data:image/gif;base64,R0lGODlhAQABAAAAADs=','https://www.geogebra.org/images/GeoGebra_loading.png','https://www.geogebra.org/images/applet_play.png');
-</script>
+	</div>
+<div id="navbar">
+	<ul>
+		<li><a href="Profile.html">Profile</a></li>
+		<li><a href="Persegi.html">Persegi</a></li>
+		<li><a href="Persegi Panjang.html">Persegi Panjang</a></li>
+		<li class="active"><a href="Trapesium.html">Trapesium</a></li>
+		<li><a href="Layang-layang.html">Layang-layang</a></li>
+	</ul>
+</div>
+<div id="content">
+	<center>
+		<h2>BAB III</h2>
+		<h2>Trapesium</h2>
+		<iframe src="geogebra trapesium.html" width="800" height="400" align="content"></iframe>
+	</center>
+	<h3>Jenis-jenis Trapesium</h3>
+	<ol>
+		<p>Trapesium terbagi menjadi 3 jenis:</p>
+		<li>Trapesium sama kaki</li>
+		<p align="justify">Trapesium sama kaki adalah trapesium yang memiliki kaki atau sisi trapesium yang tidak sejajar sama panjang. Sudut-sudut sisi sejajar (alas) pada trapesium sama kaki sama besar. Trapesium sama kaki memiliki simetri lipat dan kedua diagonalnya sama panjang.</p>
+		<img src="trapesium sk.png"width="200" height="100">
+		<br>
+		<li>Trapesium siku-siku</li>
+		<br>
+		<p align="justify">Trapesium siku-siku adalah trapesium yang memiliki sepasang sudut siku-siku. Trapesium jenis ini juga bisa digunakan untuk memperkirakan luas daerah di bawah kurva.</p>
+		<img src="tra ss.png"width="200" height="100">
+		<br>
+		<li>Trapesium sembarang</li>
+		<br>
+		<p align="justify">Trapesium sembarang adalah ketika trapesium memiliki sisi dan sudut trapesium yang tidak sama, keempat sisinya memiliki panjang yang berbeda. </p>
+		<img src="tra s.png"width="200" height="100">
+	</ol>
+	<br>
+	<h3>Bagian-bagian Trapesium</h3>
+	<ol>
+		<p align="justify">Perhatikan bagian-bagian trapesium berikut:</p>
+		<img src="bag tr.png"width="200" height="100">
+		<br>
+		<li>AB, BC, CD, DA adalah sisi-sisi trapesium </li>
+		<br>
+		<li>a dan b adalah alas-alas sejajar trapesium </li>
+		<br>
+		<li>t adalah tinggi trapesium</li>
+	</ol>
+	<br>
+	<h3>Sifat-sifat Trapesium</h3>
+	<ol>
+		<li>Terdapat 4 rusuk dan 4 titik siku.</li>
+		<br>
+		<li>Memiliki sepasang sisi sejajar.</li>
+		<br>
+		<li>Salah satu kakinya tegak lurus (trapesium siku-siku) terhadap sisi sejajarnya.</li>
+		<br>
+		<li>Jumlah sudutnya berdekatan 180°.</li>
+		<br>
+		<li>Hanya memiliki 1 simetri putar saja.</li>
+	</ol>
+	<br>
+	<h3>Keliling Trapesium</h3>
+	<img src="k tra.png" width="200" height="100">
+	<p>Keliling&ensp;= panjang AB + panjang BC + panjang CD + panjang DA</p>
+	<p>K &ensp;&ensp;&ensp;&ensp;&ensp;= sisi + sisi + sisi + sisi</p>
+	<p>K &ensp;&ensp;&ensp;&ensp;&ensp;= a + b + c + d</p>
+	<p>Contoh:</p>
+	<p>Tentukan keliling trapesium berikut.</p>
+	<img src="con k.png"width="200" height="100">
+	<p>Jawab:</p>
+	<p>Diketahui: a = 9 cm, b = 15 cm, c = 4 cm, dan d = 15 cm</p>
+	<p>Keliling trapesium = a + b + c + d</p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&ensp;&ensp;&ensp;&ensp;= 9 + 15 + 4 + 15</p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&ensp;&ensp;&ensp;&ensp;= 43 cm</p>
+	<p>Jadi, keliling trapesium tersebut adalah 43 cm.</p>
+	<br>
+	<h3>Luas Trapesium</h3>
+	<table>
+		<thead>
+			<th><img src="lu tra.png"width="200" height="120"></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+
+			<th><img src="rulu.png"width="120" height="90"></th>
+		</thead>
+	</table>
+	<br>
+	<p>Contoh:</p>
+	<p>Hitunglah luas trapesium ABCD pada gambar berikut:</p>
+	<img src="contou.png"width="200" height="120">
+	<p>Jawab:</p>
+	<p>Diketahui: a = 8 cm, b = 4 cm, dan t = 6 cm </p>
+	<img src="jwb lt.png"width="300" height="170">
+	<p>Jadi, luas trapesium ABCD adalah 36 cm<sup>2</sup>.</p>
+	<br>
+	<h3>Pemecahan Masalah yang Berkaitan dengan Luas Trapesium</h3>
+	<p align="justify">Budi mencat papan nama yang berbentuk trapesium. Panjang sisi papan nama yang sejajar 40 cm dan 24 cm. Tinggi trapesium 15 cm.</p>
+	<p>Hitunglah luas permukaan papan nama yang dicat!</p>
+	<br>
+	<p>Diketahui: a = 40 cm, b = 24 cm, dan t = 15 cm </p>
+	<p>Ditanya: luas permukaan papan nama yang di cat</p>
+	<p>Jawab:</p>
+	<img src="pemecahan.png"width="300" height="200">
+	<p>Jadi, luas permukaan papan nama yang di cat oleh budi adalah 480 cm<sup>2</sup>.</p>
+	<br>
+	<table border="1">
+		<thead>
+			<th>Rangkuman</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<ol>
+						<li>Jenis Trapesium</li>
+						<ol type="a">
+							<br>
+							<li>Trapesium sama kaki</li>
+							<br>
+							<li>Trapesium siku-siku</li>
+							<br>
+							<li>Trapesium sembarang</li>
+						</ol>
+							<br>
+						<li>Bagian-bagian Trapesium</li>
+						<ol type="a">
+							<br>
+							<li>AB, BC, CD, DA adalah sisi-sisi trapesium </li>
+							<br>
+							<li>a dan b adalah alas-alas sejajar trapesium </li>
+							<br>
+							<li>t adalah tinggi trapesium</li>
+						</ol>
+						<br>
+						<li>Keliling Trapesium = a + b + c + d</li>
+						<br>
+						<li>Luas trapesium = [(a + b) × t]/2</li>
+					</ol>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<h3>Latihan Soal</h3>
+	<ol type="I">
+		<li>Pertanyaan</li>
+	<ol>
+		<li>Diketahui sebuah trapesium sama kaki memiliki panjang sisi sejajar 15 cm dan 10 cm, panjang dua sisi lainnya adalah 10 cm dan 8 cm. Berapakah keliling trapesium tersebut?</li>
+		<li>Hitunglah luas trapesium berikut.</li>
+		<br>
+		<br>
+		<br>
+		<br>
+		<img src="pertanyaan.png"width="200" height="120">
+	</ol>
+	<br>
+		<li>Jawaban</li>
+		<ol>
+		<br>
+		<li><p>Diketahui: a = 15 cm, b = 10 cm, c = 10 cm, dan d = 8 cm</p></li>
+		<br>
+		<br>
+		<p>Ditanya: Keliling trapesium?</p>
+		<p>Jawab:</p>
+		<p>Keliling trapesium = a + b + c + d</p>
+		<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 15 + 10 + 10 + 8</p>
+		<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 43 cm</p>
+		<p>Jadi, keliling trapesium tersebut adalah 43 cm.</p>
+		<li>Diketahui: a = 12 cm, b = 8 cm, t = 10 cm</li>
+		<br>
+		<p>Ditanya: Luas Trapesium?</p>
+		<p>Jawab:</p>
+		<img src="jwb latsol.png"width="300" height="200">
+		<p>Jadi, luas trapesium tersebut adalah 28 cm<sup>2</sup>.</p>
+		</ol>
+		</ol>
+	<br>
+	<h3>Evaluasi</h3>
+	<ol>
+		<li>Sebuah trapesium mempunyai panjang sisi AB = 2 cm, BC = 7 cm, CD = 9 cm, dan DA = 8 cm. Berapakah keliling trapesium tersebut?</li>
+		<li>Sebuah trapesium dengan panjang sisi OP = 32 cm, PQ = 27 cm, QR = 19 cm, dan RP = 18 cm. berapakah keliling trapesium tersebut?</li>
+		<li>Luas trapesium berikut adalah…</li>
+		<br>
+		<br>
+		<br>
+		<img src="ev tr.png"width="180" height="100">
+		<li>Jika diketahui luas sebuah trapesium adalah 640 cm<sup>2</sup>. Dan juga diketahui tinggi trapesium 16 cm dan panjang salah satu sisi sejajar 28 cm. Berapa panjang sisi sejajar yang satunya lagi?</li>
+		<li>Selembar kertas berbentuk trapesium dengan ukuran sisi-sisi yang sejajar 24 cm dan 16 cm. Luas trapesium tersebut adalah 400 cm<sup>2</sup>. Tingginya adalah ....</li>
+	</ol>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>Jika masih belum mengerti cara menghitung keliling dan luas trapesium, kalian bisa menonton video youtube dibawah ini.</p>
+	<iframe src="https://www.youtube.com/embed/JnBhUV-m-Rc" width="500" height="300"></iframe>
+</div>
+	
 </body>
 </html>
