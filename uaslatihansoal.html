@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bangun Datar</title>
+	<script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			user-select: none;
+			box-sizing: border-box;
+			font-family: 'GILL sans', 'GILL Sans MT', Calibri, 'Trebuchet MS';	
+			}
+
+		.sidebar {
+			position: fixed;
+			width: 260px;
+			height: 100%;
+			left: -260px;
+			background: #1b1b1b;
+		}
+		.sidebar .text {
+			color: white;
+			font-size: 25px;
+			font-weight: 600;
+			line-height: 65px;
+			text-align: center;
+			background: #1e1e1e;
+			letter-spacing: 1px;
+		}
+		nav ul {
+			background:  #1b1b1b;
+			height: 100%;
+			width: 100%;
+			list-style: none;
+		}
+		nav ul li {
+			line-height: 60px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+		nav ul li a {
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+			padding-left: 40px;
+			font-weight: 500;
+			display: block;
+			width: 100%;
+			border-left: 3px solid transparent;
+		}
+		nav ul li a:hover {
+			color: cyan;
+			background: #1e1e1e;
+			border-left-color: cyan;
+		}
+		nav ul ul {
+			position: static;
+			display: none;
+		}
+		nav ul ul li {
+			line-height: 42px;
+			border-bottom: none;
+		}
+		nav ul ul li a {
+			font-size: 17px;
+			color: #e6e6e6;
+			padding-left: 80px;
+		}
+		.sidebar ul li .dropdown{
+			display: none;
+		}
+		.sidebar ul li:hover .dropdown {
+			display: block;
+			background: black;
+			position: absolute;
+			padding: 0px;
+
+		}
+
+	.menu ul li:hover .dropdown li {
+		display: block;
+	}
+	.active {
+
+	}
+	#check {
+		display: none;
+
+	}
+	label #btn, label #cancel {
+		position: absolute;
+		height: 50px;
+		width: 45px;
+		cursor: pointer;
+		font-size: 27px;
+		text-align: center;
+		line-height: 45px;
+		color: white;
+		margin: 5px 30px;
+		border: 5px solid black;
+		border-radius: 5px;
+		background: black;
+		transition: all .5s ease;
+	}
+	label #cancel {
+		opacity: 0;
+		visibility: hidden;
+	}
+	#check:checked ~ .sidebar {
+		left: 0;
+	}
+	#check:checkedc~ label #btn {
+		margin-left: 265px;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#check:checked ~ label #cancel {
+		margin-left: 265px;
+		opacity: 1;
+		visibility: visible;
+	}
+			.float-kiri {
+			float: left;
+			margin-right: 50px;
+		}
+		.text {
+			margin: 25px;
+			margin-top: 0;
+		}
+	.v {
+		margin-left: 30px;
+	}
+	</style>
+</head>
+<body class="text">
+	<input type="checkbox" id="check">
+	<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cancel"></i>
+	</label>
+
+	<nav class="sidebar">
+		<div class="text">MATEMATIKA BANGUN DATAR</div>
+		<ul>
+			<li><a href="semoga aamiin.html">Profile</a></li>
+			<li><a href="Pendahuluan.html">Pendahuluan</a></li>
+			<li><a href="materibangundatar.html">Materi</a>
+				<ul class="dropdown">
+					<li><a href="uaspersegi.html">Persegi</a></li>
+					<li><a href="uaspersegipanjang.html">Persegi Panjang</a></li>
+					<li><a href="uastrapesium.html">Trapesium</a></li>
+					<li><a href="uaslayanglayang.html">Layang-layang</a></li>
+				</ul>
+			</li>
+			<li class="active"><a href="uaslatihansoal.html">Latihan Soal</a></li>
+			<li><a href="uasevaluasi.html">Evaluasi</a></li>
+		</ul>
+	</nav>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+	<h2>Latihan Soal</h2>
+	</center>
+	<hr>
+	<h3>Persegi</h3>
+	<br>
+	<table border="1">
+		<thead>
+			<tr>
+				<th> <img src="latihan persegi.png" width="110" height="100"></th>
+				<th>Luas persegi di samping adalah ... cm<sup>2</sup></th>
+			</tr>
+		</thead>
+	</table>
+	<br>
+	<p>Diketahui: Panjang sisi persegi (s) = 17 cm</p>
+	<p>Ditanya: Luas persegi?</p>
+	<p>Jawab:</p>
+	<p>L &nbsp;= s × s</p>
+	<p>&ensp;&ensp;= 17 × 17</p>
+	<p>&ensp;&ensp;= 289</p>
+	<br>
+	<p>Jadi, luas persegi yang memiliki panjang sisi 17 cm adalah 289 cm<sup>2</sup>.</p>
+	<br>
+	<table border="1">
+		<thead>
+			<tr>
+				<th> <img src="latihan persegi.png" width="110" height="100"></th>
+				<th>Keliling persegi di samping adalah…cm</th>
+			</tr>
+		</thead>
+	</table>
+	<br>
+	<p>Diketahui: Panjang sisi persegi (s) = 17 cm</p>
+	<p>Ditanya: Keliling persegi?</p>
+	<p>Jawab:</p>
+	<p>K&nbsp;= 4 × s</p>
+	<p>&ensp;&ensp;= 4 × 17</p>
+	<p>&ensp;&ensp;= 68</p>
+	<br>
+	<p>Jadi, keliling persegi yang memiliki panjang sisi 17 cm adalah 68 cm.</p>
+	<br>
+	<br>
+	<hr>
+		<h3>Persegi Panjang</h3>
+		<br>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Keliling bangun di samping adalah ... cm.</th>		
+				<th><img src="latihan persegip.png"></th>
+			</tr>
+		</thead>
+	</table>
+	<br>
+	<p>Diketahui: p = 14 cm dan l = 9 cm</p>
+	<p>Ditanya: Keliling persegi panjang?</p>
+	<p>Jawab:</p>
+	<p>K 	= 2 × (p + l)</p>
+	<p>&ensp;&ensp;= 2 × (14 + 9)</p>
+	<p>&ensp;&ensp;= 2 × 23</p>
+	<p>&ensp;&ensp;= 46</p>
+	<br>
+	<p>Jadi, keliling persegi panjang tersebut adalah 46 cm.</p>
+	<br>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Luas bangun di samping adalah ... cm<sup>2</sup>.</th>		
+				<th><img src="latihan persegip.png"></th>
+			</tr>
+		</thead>
+	</table>
+	<br>
+	<p>Diketahui: p = 14 cm dan l = 9 cm</p>
+	<p>Ditanya: Luas persegi panjang?</p>
+	<p>Jawab:</p>
+	<p>L &nbsp;= p × l</p>
+	<p>&ensp;&ensp;= 14 × 9</p>
+	<p>&ensp;&ensp;= 126</p>
+	<br>
+	<p>Jadi, luas persegi panjang tersebut adalah 126 cm<sup>2</sup>.</p>
+	<br>
+	<br>
+	<hr>
+		<h3>Trapesium</h3>
+		<br>
+	<ol type="I">
+		<li>Pertanyaan</li>
+	<ol class="v">
+		<br>
+		<li>Diketahui sebuah trapesium sama kaki memiliki panjang sisi sejajar 15 cm dan 10 cm, panjang dua sisi lainnya adalah 10 cm dan 8 cm. Berapakah keliling trapesium tersebut?</li>
+		<li>Hitunglah luas trapesium berikut.</li>
+		<br>
+		<img src="pertanyaan.png"width="200" height="120">
+	</ol>
+	<br>
+		<li>Jawaban</li>
+		<ol class="v">
+		<br>
+		<li><p>Diketahui: a = 15 cm, b = 10 cm, c = 10 cm, dan d = 8 cm</p></li>
+		<br>
+		<br>
+		<p>Ditanya: Keliling trapesium?</p>
+		<p>Jawab:</p>
+		<p>Keliling trapesium = a + b + c + d</p>
+		<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 15 + 10 + 10 + 8</p>
+		<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 43 cm</p>
+		<p>Jadi, keliling trapesium tersebut adalah 43 cm.</p>
+		<br>
+		<li>Diketahui: a = 12 cm, b = 8 cm, t = 10 cm</li>
+		<br>
+		<p>Ditanya: Luas Trapesium?</p>
+		<p>Jawab:</p>
+		<img src="jwb latsol.png"width="300" height="200">
+		<p>Jadi, luas trapesium tersebut adalah 28 cm<sup>2</sup>.</p>
+		</ol>
+		</ol>
+	<br>
+	<br>
+	<hr>
+		<h3>Layang-layang</h3>
+		<br>
+	<ol type="I">
+		<li>Pertanyaan</li>
+		<ol class="v">
+			<br>
+			<li>Hitunglah keliling layang-layang berikut.</li>
+			<br>
+			<img src="latsol layang.png" width="120" height="150">
+			<br>
+			<li>Hitunglah luas layang-layang berikut.</li>
+			<br>
+			<img src="latsol layang2.png" width="120" height="150">
+		</ol>
+		<br>
+		<li>Jawaban</li>
+		<ol class="v">
+			<br>
+			<li>Diketahui: a = 15 cm dan b = 28 cm</li>
+			<br>
+			<p>Ditanya: Keliling layang-layang?</p>
+			<p>Jawab:</p>
+			<p>Keliling layang-layang &nbsp;= 2 (a + b)</p>
+			<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 2 (15 + 28)</p>
+			<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 86 cm</p>
+			<p>Jadi, keliling layang-layang tersebut adalah 86 cm.</p>
+			<br>
+			<li>Diketahui: d1 = 18 cm dan d2 = 12 cm</li>
+			<p>Ditanya: Luas layang-layang?</p>
+			<p>Jawab:</p>
+			<img src="jwbn luas layang.png" width="320" height="200">
+			<p>Jadi, luas layang-layang tersebut adalah 90 cm<sup>2</sup>.</p>
+		</ol>
+	</ol>
+	<br>
+</body>
+</html>

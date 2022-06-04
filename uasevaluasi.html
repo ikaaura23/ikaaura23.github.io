@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bangun Datar</title>
+	<script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			user-select: none;
+			box-sizing: border-box;
+			font-family: 'GILL sans', 'GILL Sans MT', Calibri, 'Trebuchet MS';	
+			}
+
+		.sidebar {
+			position: fixed;
+			width: 260px;
+			height: 100%;
+			left: -260px;
+			background: #1b1b1b;
+		}
+		.sidebar .text {
+			color: white;
+			font-size: 25px;
+			font-weight: 600;
+			line-height: 65px;
+			text-align: center;
+			background: #1e1e1e;
+			letter-spacing: 1px;
+		}
+		nav ul {
+			background:  #1b1b1b;
+			height: 100%;
+			width: 100%;
+			list-style: none;
+		}
+		nav ul li {
+			line-height: 60px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+		nav ul li a {
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+			padding-left: 40px;
+			font-weight: 500;
+			display: block;
+			width: 100%;
+			border-left: 3px solid transparent;
+		}
+		nav ul li a:hover {
+			color: cyan;
+			background: #1e1e1e;
+			border-left-color: cyan;
+		}
+		nav ul ul {
+			position: static;
+			display: none;
+		}
+		nav ul ul li {
+			line-height: 42px;
+			border-bottom: none;
+		}
+		nav ul ul li a {
+			font-size: 17px;
+			color: #e6e6e6;
+			padding-left: 80px;
+		}
+		.sidebar ul li .dropdown{
+			display: none;
+		}
+		.sidebar ul li:hover .dropdown {
+			display: block;
+			background: black;
+			position: absolute;
+			padding: 0px;
+
+		}
+
+	.menu ul li:hover .dropdown li {
+		display: block;
+	}
+	.active {
+
+	}
+	#check {
+		display: none;
+
+	}
+	label #btn, label #cancel {
+		position: absolute;
+		height: 50px;
+		width: 45px;
+		cursor: pointer;
+		font-size: 27px;
+		text-align: center;
+		line-height: 45px;
+		color: white;
+		margin: 5px 30px;
+		border: 5px solid black;
+		border-radius: 5px;
+		background: black;
+		transition: all .5s ease;
+	}
+	label #cancel {
+		opacity: 0;
+		visibility: hidden;
+	}
+	#check:checked ~ .sidebar {
+		left: 0;
+	}
+	#check:checkedc~ label #btn {
+		margin-left: 265px;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#check:checked ~ label #cancel {
+		margin-left: 265px;
+		opacity: 1;
+		visibility: visible;
+	}
+			.float-kiri {
+			float: left;
+			margin-right: 50px;
+		}
+		.text {
+			margin: 25px;
+			margin-top: 0;
+		}
+	</style>
+</head>
+<body class="text">
+	<input type="checkbox" id="check">
+	<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cancel"></i>
+	</label>
+
+	<nav class="sidebar">
+		<div class="text">MATEMATIKA BANGUN DATAR</div>
+		<ul>
+			<li><a href="semoga aamiin.html">Profile</a></li>
+			<li><a href="Pendahuluan.html">Pendahuluan</a></li>
+			<li><a href="materibangundatar.html">Materi</a>
+				<ul class="dropdown">
+					<li><a href="uaspersegi.html">Persegi</a></li>
+					<li><a href="uaspersegipanjang.html">Persegi Panjang</a></li>
+					<li><a href="uastrapesium.html">Trapesium</a></li>
+					<li><a href="uaslayanglayang.html">Layang-layang</a></li>
+				</ul>
+			</li>
+			<li><a href="uaslatihansoal.html">Latihan Soal</a></li>
+			<li class="active"><a href="uasevaluasi.html">Evaluasi</a></li>
+		</ul>
+	</nav>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+	<h2>Evaluasi</h2>
+	</center>
+	<hr>
+	<h3>Persegi</h3>
+	<br>
+	<ol>
+		<li>Sebuah persegi memiliki panjang sisi 20 cm. Luas persegi tersebut adalah…</li>
+		<li>Sebuah persegi memiliki panjang sisi 18 cm. Keliling persegi tersebut adalah…</li>
+		
+		<li>Berapakah keliling bangun datar berikut.
+			<p><img src="eva per.png"width="110" height="110"></p></li>
+		<li>Sebuah persegi memiliki keliling sebesar 32 cm. Berapakah panjang dari sisi persegi tersebut?</li>
+		<li>Sebuah persegi memiliki luas sebesar 625 cm2. Berapakah panjang dari sisi persegi Panjang tersebut?</li>
+	</ol>
+	<br>
+	<br>
+	<hr>
+	<h3>Persegi Panjang</h3>
+	<br>
+	<ol>
+		<li>Sebuah persegi panjang memiliki panjang 10 cm dan lebar 5 cm. Keliling persegi panjang tersebut adalah…</li>
+		<li>Sebuah persegi panjang memiliki panjang 12 cm dan lebar 8 cm. Luas persegi panjang tersebut adalah… </li>
+	
+		<li>Berapakah luas bangun datar berikut.</li>
+		
+			<p><img src="evaluasi persegip.png"></p>
+		<li>Sebuah persegi panjang keliling nya 34 cm dan memili panjang 12 cm. Berapakah lebar persegi panjang tersebut?</li>
+		<li>Sebuah persegi panjang luas nya 160 cm2 dan memiliki lebar 8 cm. Berapakah panjang persegi panjang tersebut?</li>
+	</ol>
+	<br>
+	<br>
+	<hr>
+	<h3>Trapesium</h3>
+	<br>
+	<ol>
+		<li>Sebuah trapesium mempunyai panjang sisi AB = 2 cm, BC = 7 cm, CD = 9 cm, dan DA = 8 cm. Berapakah keliling trapesium tersebut?</li>
+		<li>Sebuah trapesium dengan panjang sisi OP = 32 cm, PQ = 27 cm, QR = 19 cm, dan RP = 18 cm. berapakah keliling trapesium tersebut?</li>
+		<li>Luas trapesium berikut adalah…</li>
+		
+		<img src="ev tr.png"width="180" height="100">
+		<li>Jika diketahui luas sebuah trapesium adalah 640 cm<sup>2</sup> dan juga diketahui tinggi trapesium 16 cm dan panjang salah satu sisi sejajar 28 cm. Berapa panjang sisi sejajar yang satunya lagi?</li>
+		<li>Selembar kertas berbentuk trapesium dengan ukuran sisi-sisi yang sejajar 24 cm dan 16 cm. Luas trapesium tersebut adalah 400 cm<sup>2</sup>. Tingginya adalah ....</li>
+	</ol>
+	<br>
+	<br>
+	<hr>
+	<h3>Layang-layang</h3>
+	<br>
+	<ol>
+		<li>Keliling layang-layang yang memiliki sisi AB = 11 cm dan sisi CD = 13 cm. hitunglah keliling layang-layang tersebut.</li>
+		<li>Luas layang-layang yang panjang diagonal-diagonalnya 40 dm dan 25 dm adalah ....</li>
+		<li>Eka ingin membuat sebuah layang-layang yang diagonal-diagonalnya berukuran 31 cm dan 20 cm. Luas layang-layang Eka adalah ....</li>
+		<li>Sebuah layang-layang mempunyai luas 200 cm<sup>2</sup>. Panjang salah satu diagonalnya adalah 25 cm. Panjang diagonal yang lain adalah ....</li>
+		<li>Diketahui AC = 14 cm dan BD = 28 cm. Luas bangun dibawah ini adalah ....</li>
+		<img src="eval layang.png" width="120" height="150">
+	</ol>
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bangun Datar</title>
+	<script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			user-select: none;
+			box-sizing: border-box;
+			font-family: 'GILL sans', 'GILL Sans MT', Calibri, 'Trebuchet MS';	
+			}
+
+		.sidebar {
+			position: fixed;
+			width: 260px;
+			height: 100%;
+			left: -260px;
+			background: #1b1b1b;
+		}
+		.sidebar .text {
+			color: white;
+			font-size: 25px;
+			font-weight: 600;
+			line-height: 65px;
+			text-align: center;
+			background: #1e1e1e;
+			letter-spacing: 1px;
+		}
+		nav ul {
+			background:  #1b1b1b;
+			height: 100%;
+			width: 100%;
+			list-style: none;
+		}
+		nav ul li {
+			line-height: 60px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+		nav ul li a {
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+			padding-left: 40px;
+			font-weight: 500;
+			display: block;
+			width: 100%;
+			border-left: 3px solid transparent;
+		}
+		nav ul li a:hover {
+			color: cyan;
+			background: #1e1e1e;
+			border-left-color: cyan;
+		}
+		nav ul ul {
+			position: static;
+			display: none;
+		}
+		nav ul ul li {
+			line-height: 42px;
+			border-bottom: none;
+		}
+		nav ul ul li a {
+			font-size: 17px;
+			color: #e6e6e6;
+			padding-left: 80px;
+		}
+		.sidebar ul li .dropdown{
+			display: none;
+		}
+		.sidebar ul li:hover .dropdown {
+			display: block;
+			background: black;
+			position: absolute;
+			padding: 0px;
+
+		}
+
+	.menu ul li:hover .dropdown li {
+		display: block;
+	}
+	.active {
+
+	}
+	#check {
+		display: none;
+
+	}
+	label #btn, label #cancel {
+		position: absolute;
+		height: 50px;
+		width: 45px;
+		cursor: pointer;
+		font-size: 27px;
+		text-align: center;
+		line-height: 45px;
+		color: white;
+		margin: 5px 30px;
+		border: 5px solid black;
+		border-radius: 5px;
+		background: black;
+		transition: all .5s ease;
+	}
+	label #cancel {
+		opacity: 0;
+		visibility: hidden;
+	}
+	#check:checked ~ .sidebar {
+		left: 0;
+	}
+	#check:checkedc~ label #btn {
+		margin-left: 265px;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#check:checked ~ label #cancel {
+		margin-left: 265px;
+		opacity: 1;
+		visibility: visible;
+	}
+			.float-kiri {
+			float: left;
+			margin-right: 50px;
+		}
+		.text {
+			margin: 25px;
+			margin-top: 0;
+		}
+		.m {
+			margin-left: 50px;
+		}
+		.g {
+			margin-left: 30px;
+		}
+		.f {
+			margin-left: 45px;
+		}
+		.w {
+			margin-left: 50px;
+		}
+		.m {
+			margin-left: 25px;
+		}
+	</style>
+</head>
+<body class="text">
+	<input type="checkbox" id="check">
+	<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cancel"></i>
+	</label>
+
+	<nav class="sidebar">
+		<div class="text">MATEMATIKA BANGUN DATAR</div>
+		<ul>
+			<li><a href="semoga aamiin.html">Profile</a></li>
+			<li><a href="Pendahuluan.html">Pendahuluan</a></li>
+			<li><a href="materibangundatar.html">Materi</a>
+				<ul class="dropdown">
+					<li><a href="uaspersegi.html">Persegi</a></li>
+					<li><a href="uaspersegipanjang.html">Persegi Panjang</a></li>
+					<li class="active"><a href="uastrapesium.html">Trapesium</a></li>
+					<li><a href="uaslayanglayang.html">Layang-layang</a></li>
+				</ul>
+			</li>
+			<li><a href="uaslatihansoal.html">Latihan Soal</a></li>
+			<li><a href="uasevaluasi.html">Evaluasi</a></li>
+		</ul>
+	</nav>
+	<br>
+	<br>
+	<br>
+		<center>
+		<h2>BAB III</h2>
+		<h2>Trapesium</h2>
+		<br>
+		<iframe src="geogebra trapesium.html" width="800" height="400" align="content"></iframe>
+	</center>
+	<br>
+	<br>
+	<hr>
+	<h3>Jenis-jenis Trapesium</h3>
+	<ol>
+		<br>
+		<p>Trapesium terbagi menjadi 3 jenis:</p>
+		<br>
+		<li>Trapesium sama kaki</li>
+		<p align="justify">Trapesium sama kaki adalah trapesium yang memiliki kaki atau sisi trapesium yang tidak sejajar sama panjang. Sudut-sudut sisi sejajar (alas) pada trapesium sama kaki sama besar. Trapesium sama kaki memiliki simetri lipat dan kedua diagonalnya sama panjang.</p>
+		<img src="trapesium sk.png"width="200" height="100">
+		<br>
+		<li>Trapesium siku-siku</li>
+				<p align="justify">Trapesium siku-siku adalah trapesium yang memiliki sepasang sudut siku-siku. Trapesium jenis ini juga bisa digunakan untuk memperkirakan luas daerah di bawah kurva.</p>
+		<img src="tra ss.png"width="200" height="100">
+		<br>
+		<li>Trapesium sembarang</li>
+		
+		<p align="justify">Trapesium sembarang adalah ketika trapesium memiliki sisi dan sudut trapesium yang tidak sama, keempat sisinya memiliki panjang yang berbeda. </p>
+		<img src="tra s.png"width="200" height="100">
+	</ol>
+	<br>
+	<br>
+	<hr>
+	<h3>Bagian-bagian Trapesium</h3>
+	<ol class="m">
+		<br>
+		<p align="justify">Perhatikan bagian-bagian trapesium berikut:</p>
+		<img src="bag tr.png"width="200" height="100">
+		<br>
+		<li>AB, BC, CD, DA adalah sisi-sisi trapesium </li>
+		
+		<li>a dan b adalah alas-alas sejajar trapesium </li>
+		
+		<li>t adalah tinggi trapesium</li>
+	</ol>
+	<br>
+	<br>
+	<hr>
+	<h3>Sifat-sifat Trapesium</h3>
+	<ol class="w">
+		<br>
+		<li>Terdapat 4 rusuk dan 4 titik siku.</li>
+		
+		<li>Memiliki sepasang sisi sejajar.</li>
+		
+		<li>Salah satu kakinya tegak lurus (trapesium siku-siku) terhadap sisi sejajarnya.</li>
+		
+		<li>Jumlah sudutnya berdekatan 180°.</li>
+		
+		<li>Hanya memiliki 1 simetri putar saja.</li>
+	</ol>
+	<br>
+	<br>
+	<hr>
+	<h3>Keliling Trapesium</h3>
+	<br>
+	<img src="k tra.png" width="200" height="100">
+	<p>Keliling&ensp;= panjang AB + panjang BC + panjang CD + panjang DA</p>
+	<p>K &ensp;&ensp;&ensp;&ensp;&ensp;= sisi + sisi + sisi + sisi</p>
+	<p>K &ensp;&ensp;&ensp;&ensp;&ensp;= a + b + c + d</p>
+	<br>
+	<p>Contoh:</p>
+	<p>Tentukan keliling trapesium berikut.</p>
+	<img src="con k.png"width="200" height="100">
+	<p>Jawab:</p>
+	<p>Diketahui: a = 9 cm, b = 15 cm, c = 4 cm, dan d = 15 cm</p>
+	<p>Keliling trapesium = a + b + c + d</p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&ensp;&ensp;&ensp;&ensp;= 9 + 15 + 4 + 15</p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&ensp;&ensp;&ensp;&ensp;= 43 cm</p>
+	<br>
+	<p>Jadi, keliling trapesium tersebut adalah 43 cm.</p>
+	<br>
+	<br>
+	<hr>
+	<h3>Luas Trapesium</h3>
+	<br>
+	<table>
+		<thead>
+			<th><img src="lu tra.png"width="200" height="120"></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+
+			<th><img src="rulu.png"width="120" height="90"></th>
+		</thead>
+	</table>
+	<br>
+	<p>Contoh:</p>
+	<p>Hitunglah luas trapesium ABCD pada gambar berikut:</p>
+	<img src="contou.png"width="200" height="120">
+	<p>Jawab:</p>
+	<p>Diketahui: a = 8 cm, b = 4 cm, dan t = 6 cm </p>
+	<br>
+	<img src="jwb lt.png"width="300" height="170">
+	<br>
+	<p>Jadi, luas trapesium ABCD adalah 36 cm<sup>2</sup>.</p>
+	<br>
+	<br>
+	<hr>
+	<h3>Pemecahan Masalah yang Berkaitan dengan Luas Trapesium</h3>
+	<p align="justify">Budi mencat papan nama yang berbentuk trapesium. Panjang sisi papan nama yang sejajar 40 cm dan 24 cm. Tinggi trapesium 15 cm.</p>
+	<p>Hitunglah luas permukaan papan nama yang dicat!</p>
+	<br>
+	<p>Diketahui: a = 40 cm, b = 24 cm, dan t = 15 cm </p>
+	<p>Ditanya: luas permukaan papan nama yang di cat</p>
+	<p>Jawab:</p>
+
+	<img class="m" src="pemecahan.png"width="300" height="200">
+	<p>Jadi, luas permukaan papan nama yang di cat oleh budi adalah 480 cm<sup>2</sup>.</p>
+	<br>
+	<br>
+	<hr>
+	<br>
+	<table border="1">
+		<thead>
+			<th>Rangkuman</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<ol class="g">
+						<li>Jenis Trapesium</li>
+						<ul class="f">
+							
+							<li>Trapesium sama kaki</li>
+							
+							<li>Trapesium siku-siku</li>
+							
+							<li>Trapesium sembarang</li>
+						</ul>
+							<br>
+						<li>Bagian-bagian Trapesium</li>
+						<ul class="f">
+							
+							<li>AB, BC, CD, DA adalah sisi-sisi trapesium &ensp;&ensp;</li>
+							
+							<li>a dan b adalah alas-alas sejajar trapesium </li>
+							
+							<li>t adalah tinggi trapesium</li>
+						</ul>
+						<br>
+						<li>Keliling Trapesium = a + b + c + d</li>
+						<br>
+						<li>Luas trapesium = [(a + b) × t]/2</li>
+						<br>
+					</ol>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<br>
+	<hr>
+		<p>Jika masih belum mengerti cara menghitung keliling dan luas trapesium, kalian bisa menonton video youtube dibawah ini.</p>
+		<br>
+	<iframe src="https://www.youtube.com/embed/JnBhUV-m-Rc" width="500" height="300"></iframe>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bangun Datar</title>
+	<script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			user-select: none;
+			box-sizing: border-box;
+			font-family: 'GILL sans', 'GILL Sans MT', Calibri, 'Trebuchet MS';	
+			}
+
+		.sidebar {
+			position: fixed;
+			width: 260px;
+			height: 100%;
+			left: -260px;
+			background: #1b1b1b;
+		}
+		.sidebar .text {
+			color: white;
+			font-size: 25px;
+			font-weight: 600;
+			line-height: 65px;
+			text-align: center;
+			background: #1e1e1e;
+			letter-spacing: 1px;
+		}
+		nav ul {
+			background:  #1b1b1b;
+			height: 100%;
+			width: 100%;
+			list-style: none;
+		}
+		nav ul li {
+			line-height: 60px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+		nav ul li a {
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+			padding-left: 40px;
+			font-weight: 500;
+			display: block;
+			width: 100%;
+			border-left: 3px solid transparent;
+		}
+		nav ul li a:hover {
+			color: cyan;
+			background: #1e1e1e;
+			border-left-color: cyan;
+		}
+		nav ul ul {
+			position: static;
+			display: none;
+		}
+		nav ul ul li {
+			line-height: 42px;
+			border-bottom: none;
+		}
+		nav ul ul li a {
+			font-size: 17px;
+			color: #e6e6e6;
+			padding-left: 80px;
+		}
+		.sidebar ul li .dropdown{
+			display: none;
+		}
+		.sidebar ul li:hover .dropdown {
+			display: block;
+			background: black;
+			position: absolute;
+			padding: 0px;
+
+		}
+
+	.menu ul li:hover .dropdown li {
+		display: block;
+	}
+	.active {
+
+	}
+	#check {
+		display: none;
+
+	}
+	label #btn, label #cancel {
+		position: absolute;
+		height: 50px;
+		width: 45px;
+		cursor: pointer;
+		font-size: 27px;
+		text-align: center;
+		line-height: 45px;
+		color: white;
+		margin: 5px 30px;
+		border: 5px solid black;
+		border-radius: 5px;
+		background: black;
+		transition: all .5s ease;
+	}
+	label #cancel {
+		opacity: 0;
+		visibility: hidden;
+	}
+	#check:checked ~ .sidebar {
+		left: 0;
+	}
+	#check:checkedc~ label #btn {
+		margin-left: 265px;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#check:checked ~ label #cancel {
+		margin-left: 265px;
+		opacity: 1;
+		visibility: visible;
+	}
+			.float-kiri {
+			float: left;
+			margin-right: 50px;
+		}
+		.text {
+			margin: 25px;
+			margin-top: 0;
+		}
+	.w {
+		margin-left: 50px;
+	}
+	.k {
+		margin-left: 25px;
+	}
+	.j {
+		margin-left: 30px;
+	}
+	.o {
+		margin-left: 25px;
+	}
+	</style>
+</head>
+<body class="text">
+	<input type="checkbox" id="check">
+	<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cancel"></i>
+	</label>
+
+	<nav class="sidebar">
+		<div class="text">MATEMATIKA BANGUN DATAR</div>
+		<ul>
+			<li><a href="semoga aamiin.html">Profile</a></li>
+			<li><a href="Pendahuluan.html">Pendahuluan</a></li>
+			<li><a href="materibangundatar.html">Materi</a>
+				<ul class="dropdown">
+					<li><a href="uaspersegi.html">Persegi</a></li>
+					<li><a href="uaspersegipanjang.html">Persegi Panjang</a></li>
+					<li><a href="uastrapesium.html">Trapesium</a></li>
+					<li class="active"><a href="uaslayanglayang.html">Layang-layang</a></li>
+				</ul>
+			</li>
+			<li><a href="uaslatihansoal.html">Latihan Soal</a></li>
+			<li><a href="uasevaluasi.html">Evaluasi</a></li>
+		</ul>
+	</nav>
+	<br>
+	<br>
+	<br>
+		<center>
+	<h2>BAB IV</h2>
+	<h2>Layang-layang</h2>
+	<br>
+	<iframe src="geogebra layang-layang.html" width="800" height="400" align="content"></iframe>
+	</center>
+	<br>
+	<br>
+	<hr>
+	<h3>Bagian-bagian Layang-layang</h3>
+	<ol class="o">
+		<br>
+		<p>Perhatikan bagian layang-layang berikut.</p>
+		<img src="bag layang.png" width="200" height="120">
+		<br>
+		<br>
+		<p>Berikut bagian layang-layang.</p>
+		<li>AB, BC, CD, dan DA disebut sisi layang-layang </li>
+		
+		<li>Sisi AB = AD dan sisi BC = CD</li>
+		
+		<li>AC disebut diagonal satu (d1) </li>
+		
+		<li>BD disebut diagonal dua (d2) </li>
+		<br>
+		<p>Dari bagian-bagian tersebut dapat kita simpulkan bahwa Layang-layang merupakan segi empat yang dua pasang sisi berdekatan sama panjang.</p>
+	</ol>
+	<br>
+	<br>
+	<hr>
+	<h3>Sifat-sifat Layang-layang</h3>
+	<br>
+	<ol class="w">
+		<li>Memiliki satu sumbu simetri lipat</li>
+		
+		<li>Tidak memiliki sumbu simetri putar.</li>
+		
+		<li>Memiliki empat sisi berpasangan yang sama panjang.</li>
+		
+		<li>Memiliki empat titik sudut (sepasang sudutnya saling berhadapan sama besar).</li>
+		
+		<li>Memiliki dua diagonal yang berbeda dan saling tegak lurus.</li>
+	</ol>
+	<br>
+	<br>
+	<hr>
+	<h3>Keliling Layang-layang</h3>
+	<br>
+	<img src="kel layang.png" width="120" height="150" >
+	<br>
+	<p>Misalnya sisi AB = AD = a, kemudian sisi BC=CD= b. Lalu keliling layang-layang menjadi</p>
+	<p>K 	= AB + BC CD + DA</p>
+	<p>&ensp;&ensp;= a + b + b + a</p>
+	<p>&ensp;&ensp;= 2a + 2b</p>
+	<p>&ensp;&ensp;= 2 (a + b)</p>
+	<br>
+	<p>Contoh:</p>
+	<p>Hitunglah keliling layang-layang dibawah ini!</p>
+	<img src="contoh kel lay.png" width="120" height="150" >
+	<br>
+	<p>Diketahui: d1= 24 cm, d2 = 40 cm, a = 13 cm, dan b = 37 cm</p>
+	<p>Ditanya: Keliling layang-layang?</p>
+	<p>Jawab:</p>
+	<p>Keliling layang-layang &nbsp;= 2 (a + b)</p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 2 (13 + 37)</p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 2 (50)</p>
+	<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;= 100 cm</p>
+	<br>
+	<p>Jadi, keliling layang-layang tersebut adalah 100 cm.</p>
+	<br>
+	<br>
+	<hr>
+	<h3>Luas Layang-layang</h3>
+	<br>
+	<p>Luas layang-layang merupakan setengah dari perkalian diagonal-diagonalnya. Luas layang-layang dirumuskan:</p>
+	<br>
+	<img src="rumus luas la.png" width="110" height="80" >
+	<br>
+	<br>
+	<p>Contoh:</p>
+	<img src="contoh luas lay.png" width="120" height="150" >
+	<p>Diketahui d1 = 12 cm dan d2 = 10 cm. Berapakah luas layang-layang tersebut? </p>
+	<p>Jawab:</p>
+	<img src="luas layang.png" width="320" height="200">
+	<br>
+	<p>Jadi, luas layang-layang tersebut adalah 60 cm<sup>2</sup>.</p>
+	<br>
+	<br>
+	<hr>
+	<h3>Pemecahan Masalah yang Berkaitan dengan Luas Layang-layang</h3>
+	<br>
+	<p align="justify">Yanto membuat layang-layang dari kertas dan bambu. Panjang bambu sebagai rangka layang-layang adalah 52 cm dan 42 cm. Rangka layang-layang tersebut ditutupi kertas. Berapa luas kertas yang diperlukan?</p>
+	<br>
+	<p>Diketahui: d1 = 52 cm dan d2 = 42 cm</p>
+	<p>Ditanya: luas kertas yang diperlukan?</p>
+	<p>Jawab:</p>
+	<img src="pemecahan luas lay.png" width="320" height="200">
+	<br>
+	<p>Jadi, luas kertas yang diperlukan untuk menutupi kerangka layang-layang adalah 1092 cm<sup>2</sup>.</p>
+	<br>
+	<table border="1">
+		<thead>
+			<th>Rangkuman</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<ol class="k">
+						<li>Bagian layang-layang</li>
+						<ul class="j">
+							
+							<li>AB, BC, CD, dan DA disebut sisi layang-layang &ensp;&ensp;</li>
+							
+							<li>Sisi AB = AD dan sisi BC = CD</li>
+						
+							<li>AC disebut diagonal satu (d1) </li>
+							
+							<li>BD disebut diagonal dua (d2) </li>
+						</ul>
+						<br>
+						<li>Keliling layang-layang = 2 (a + b)</li>
+						<br>
+						<li>Luas layang-layang = (d1 × d2)/2</li>
+					</ol>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<br>
+	<hr>
+		<p>Jika masih belum mengerti cara menghitung keliling dan luas trapesium, kalian bisa menonton video youtube dibawah ini.</p>
+	<br>
+	<iframe src="https://www.youtube.com/embed/jBrUJXhxabM" width="500" height="300"></iframe>
+</body>
+</html>

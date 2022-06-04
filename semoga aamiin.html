@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bangun Datar</title>
+	<script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			user-select: none;
+			box-sizing: border-box;
+			font-family: 'GILL sans', 'GILL Sans MT', Calibri, 'Trebuchet MS';	
+			}
+
+		.sidebar {
+			position: fixed;
+			width: 260px;
+			height: 100%;
+			left: -260px;
+			background: #1b1b1b;
+		}
+		.sidebar .text {
+			color: white;
+			font-size: 25px;
+			font-weight: 600;
+			line-height: 65px;
+			text-align: center;
+			background: #1e1e1e;
+			letter-spacing: 1px;
+		}
+		nav ul {
+			background:  #1b1b1b;
+			height: 100%;
+			width: 100%;
+			list-style: none;
+		}
+		nav ul li {
+			line-height: 60px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+		nav ul li a {
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+			padding-left: 40px;
+			font-weight: 500;
+			display: block;
+			width: 100%;
+			border-left: 3px solid transparent;
+		}
+		nav ul li a:hover {
+			color: cyan;
+			background: #1e1e1e;
+			border-left-color: cyan;
+		}
+		nav ul ul {
+			position: static;
+			display: none;
+		}
+		nav ul ul li {
+			line-height: 42px;
+			border-bottom: none;
+		}
+		nav ul ul li a {
+			font-size: 17px;
+			color: #e6e6e6;
+			padding-left: 80px;
+		}
+		.sidebar ul li .dropdown{
+			display: none;
+		}
+		.sidebar ul li:hover .dropdown {
+			display: block;
+			background: black;
+			position: absolute;
+			padding: 0px;
+
+		}
+
+	.menu ul li:hover .dropdown li {
+		display: block;
+	}
+	.active {
+
+	}
+	#check {
+		display: none;
+
+	}
+	label #btn, label #cancel {
+		position: absolute;
+		height: 50px;
+		width: 45px;
+		cursor: pointer;
+		font-size: 27px;
+		text-align: center;
+		line-height: 45px;
+		color: white;
+		margin: 5px 30px;
+		border: 5px solid black;
+		border-radius: 5px;
+		background: black;
+		transition: all .5s ease;
+	}
+	label #cancel {
+		opacity: 0;
+		visibility: hidden;
+	}
+	#check:checked ~ .sidebar {
+		left: 0;
+	}
+	#check:checkedc~ label #btn {
+		margin-left: 265px;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#check:checked ~ label #cancel {
+		margin-left: 265px;
+		opacity: 1;
+		visibility: visible;
+	}
+			.float-kiri {
+			float: left;
+			margin-right: 50px;
+		}
+		.text {
+			margin: 25px;
+			margin-top: 0;
+		}
+	</style>
+</head>
+<body class="text">
+	<input type="checkbox" id="check">
+	<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cancel"></i>
+	</label>
+
+	<nav class="sidebar">
+		<div class="text">MATEMATIKA BANGUN DATAR</div>
+		<ul>
+			<li class="active"><a href="semoga aamiin.html">Profile</a></li>
+			<li><a href="Pendahuluan.html">Pendahuluan</a></li>
+			<li><a href="materibangundatar.html">Materi</a>
+				<ul class="dropdown">
+					<li><a href="uaspersegi.html">Persegi</a></li>
+					<li><a href="uaspersegipanjang.html">Persegi Panjang</a></li>
+					<li><a href="uastrapesium.html">Trapesium</a></li>
+					<li><a href="uaslayanglayang.html">Layang-layang</a></li>
+				</ul>
+			</li>
+			<li><a href="uaslatihansoal.html">Latihan Soal</a></li>
+			<li><a href="uasevaluasi.html">Evaluasi</a></li>
+		</ul>
+	</nav>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+	<h2>Profile Penulis</h2>
+	</center>
+		<br>
+		<hr>
+		<br>
+	<img src="WhatsApp Image 2022-05-28 at 14.01.12.jpeg" width="220" height="200">
+	<p>Nama : Ika Aura Nurani</p>
+	<p>Tempat tinggal : Link. Tegal Buntu Rt11/07</p>
+	<p>Tempat, tanggal lahir : Cilegon, 02 Maret 2003</p>
+	<p align="justify"> Saat ini ika merupakan seorang mahasiswa Pendidikan Matematika Angkatan 2021, di Universitas Sultan Ageng Tirtayasa (UNTIRTA). </p>
+</body>
+</html>
